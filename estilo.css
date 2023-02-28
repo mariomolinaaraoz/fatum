@@ -473,7 +473,7 @@ path {
   position: absolute;
   left: 0px;
   background-color: rgba(0, 0, 0, 0.8);
-  color: var(--color-enfasis);
+  color: #fff;
   width: 100%;
   padding: 10px;
   opacity: 0;
