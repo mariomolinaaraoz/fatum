@@ -439,7 +439,7 @@ path {
   text-transform: uppercase;
   color: #111135;
   text-decoration: underline;
-  text-decoration-color: #d3d3d3;
+  text-decoration-color: var(--color-enfasis);
   text-decoration-thickness: 5px;
 }
 
@@ -484,100 +484,6 @@ path {
 #portfolio .fila .proyecto:hover .info {
   opacity: 1;
   bottom: 0;
-}
-/* *********************/
-/* seccion C A L C U L A T O R */
-/* *********************/
-#calculator {
-  padding: 100px 15px 50px;
-  background: linear-gradient(320deg,#eb92be,#ffef78,#63c9b4);
-  display:flex;
-  font-family: 'Dosis', sans-serif;
-  font-display:swap;
-  height: inherit;
-  justify-content: center;
-}
-#calculator .titulo-seccion {
-  margin: 2rem 0;
-  text-align: center;
-  font-size: 22px;
-  text-transform: uppercase;
-  color: #111135;
-  text-decoration: underline;
-  text-decoration-color: #d3d3d3;
-  text-decoration-thickness: 5px;
-}
-#calculator .wrapper{
-  -webkit-backdrop-filter: blur(5.5px);
-  backdrop-filter: blur(5.5px);
-  border-radius: 1rem;
-  box-shadow: 0 4px 30px rgba(35,35,35,0.1);
-  color:#232323;
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255,255,255,0.34);
-  flex-basis: 400px;
-  height: 640px;
-  padding: 20px 35px;
-}
-#calculator .screen{
-  -webkit-backdrop-filter: blur(5.5px);
-  backdrop-filter: blur(5.5px);
-  background: rgba(255,255,255,0.75);
-  border:1px solid rgba(255,255,255,0.01);
-  border-radius: 1rem;
-  box-shadow: 0 4px 30px rgba(35,35,35,0.1);
-  color:#232323;
-  font-size: 35px;
-  overflow: auto;
-  padding: 20px;
-  text-align: right;
-  width: 326px;
-}
-#calculator .calc-buttons .calc-button-row {
-   display:flex;
-   justify-content: space-between;
-   margin:5% 0;
-}
-#calculator .calc-buttons .calc-button-row .calc-button{
-  -webkit-backdrop-filter: blur(5.5px);
-  backdrop-filter: blur(5.5px);
-  background:rgba(255, 255, 255, 0.75);
-  border:1px solid rgba(255, 255, 255, 0.01);
-  border-radius:1rem;
-  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-  color: #232323;
-  flex-basis: 20%;
-  font-family:inherit;
-  font-size:24px;
-  height: 65px;
-}
-#calculator .calc-buttons .calc-button-row .calc-button:last-child{
-  -webkit-backdrop-filter: blur(5.5px);
-  backdrop-filter: blur(5.5px);
-  background:rgba(255, 255, 255, 0.75);
-  border:1px solid rgba(255, 255, 255, 0.01);
-  border-radius:1rem;
-  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
-  color: #fff;
-  background: #d72880;
-}
-#calculator .calc-buttons .calc-button-row .calc-button:last-child:hover{
-  background: inherit;
-  color:inherit;
-}
-#calculator .calc-buttons .calc-button-row .calc-button:hover{
-  background-color: inherit;
-}
-#calculator .calc-buttons .calc-button-row .calc-button:active{
-  background-color: #ffef78;  
-}
-#calculator .calc-buttons .calc-button-row .double{
-  flex-basis: 47%;
-}
-#calculator .calc-buttons .calc-button-row .triple{
-  flex-basis: 73%
 }
 /* *********************/
 /* seccion C O N T A C T O */
