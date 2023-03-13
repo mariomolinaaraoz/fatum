@@ -1,91 +1,45 @@
-// Calculator
-let runningTotal = 0;
-let buffer = "0";
-let previousOperator;
+const images = document.querySelectorAll('.image');
+const lightbox = document.querySelector('.lightbox');
+const lightboxImg = lightbox.querySelector('img');
+const closeBtn = lightbox.querySelector('.close-button');
 
-const screen = document.querySelector(".screen");
+images.forEach((image) => {
+  image.addEventListener('click', () => {
+    const imgSrc = image.getAttribute('href');
+    lightboxImg.setAttribute('src', imgSrc);
+    lightbox.style.display = 'flex';
+  });
+});
 
-function buttonClick(value) {
-  if (isNaN(value)) {
-    handleSymbol(value);
-  } else {
-    handleNumber(value);
-  }
-  screen.innerText = buffer;
-}
-function handleSymbol(symbol) {
-  switch (symbol) {
-    case 'C':
-      buffer = '0';
-      runningTotal = 0;
-      break;
-    case '=':
-      if (previousOperator === null) {
-        return;
-      }
-      flushOperation(parseInt(buffer));
-      previousOperator = null;
-      buffer = runningTotal;
-      runningTotal=0;
-      break;
-    case '←':
-      if (buffer.length === 1) {
-        buffer = '0';
-      } else {
-        buffer = buffer.substring(0, buffer.length - 1);
-      }
-      break;
-    case '+':
-    case '−':
-    case '×':
-    case '÷':
-      handleMath(symbol);
-      break;
-  }
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+
+// Ajustar el tamaño de las imágenes a medida que se carga la página y cuando se cambia el tamaño de la ventana del navegador.
+window.addEventListener('load', adjustImageSize);
+window.addEventListener('resize', adjustImageSize);
+
+function adjustImageSize() {
+  const images = document.querySelectorAll('.image');
+  images.forEach((image) => {
+    const img = image.querySelector('img');
+    const aspectRatio = img.naturalWidth / img.naturalHeight;
+    const containerWidth = image.offsetWidth;
+    const containerHeight = image.offsetHeight;
+    const containerAspectRatio = containerWidth / containerHeight;
+    if (aspectRatio > containerAspectRatio) {
+      img.style.width = '100%';
+      img.style.height = 'auto';
+    } else {
+      img.style.width = 'auto';
+      img.style.height = '100%';
+    }
+  });
 }
 
-function handleMath(symbol) {
-  if (buffer === '0') {
-    return;
-  }
-  const intBuffer = parseInt(buffer);
 
-  if (runningTotal === 0) {
-    runningTotal = intBuffer;
-  } else {
-    flushOperation(intBuffer);
-  }
-  previousOperator = symbol;
-  buffer = '0';
-}
 
-function flushOperation(intBuffer) {
-  if (previousOperator === '+') {
-    runningTotal += intBuffer;
-  } else if (previousOperator === '−') {
-    runningTotal -= intBuffer;
-  } else if (previousOperator === '×') {
-    runningTotal *= intBuffer;
-  } else if (previousOperator === '÷') {
-    runningTotal /= intBuffer;
-  }
-}
-
-function handleNumber(numberString) {
-  if (buffer === '0') {
-    buffer = numberString;
-  } else {
-    buffer += numberString;
-  }
-}
-function init() {
-  document
-    .querySelector(".calc-buttons")
-    .addEventListener("click", function (event) {
-      buttonClick(event.target.innerText);
-    });
-}
-init();
 //Función que me aplica el estilo a la opciòn seleccionada y quita la previamente seleccionada
 function seleccionar(link) {
   var opciones = document.querySelectorAll("#links  a");

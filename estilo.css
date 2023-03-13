@@ -179,6 +179,27 @@ path {
     transform: scale(1);
   }
 }
+
+/* *********************/
+/* S E C C I O N E S */
+/* *********************/
+
+#servicios, #skills, #portfolio, #contacto {
+  padding: 80px 15px 20px;
+  text-align: center;
+  background-color: #f3f3f3;
+}
+.titulo-seccion {
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #111135;
+  text-decoration: underline;
+  text-decoration-color: var(--color-enfasis);
+  text-decoration-thickness: 5px;
+  margin-bottom: 3rem;
+}
+
 /* *********************/
 /* seccion S O B R E  M I */
 /* *********************/
@@ -264,28 +285,11 @@ path {
 /* seccion S E R V I C I O S */
 /* *********************/
 
-#servicios {
-  padding: 100px 15px 20px;
-
-  text-align: center;
-  background-color: #f3f3f3;
-}
-
-#servicios .titulo-seccion {
-  text-align: center;
-  font-size: 22px;
-  text-transform: uppercase;
-  color: #111135;
-  text-decoration: underline;
-  text-decoration-color: var(--color-enfasis);
-  text-decoration-thickness: 5px;
-}
-
 #servicios .fila {
   display: flex;
   justify-content: space-between;
   max-width: 1150px;
-  margin: 50px auto;
+  margin: 0px auto;
 }
 
 #servicios .fila .servicio {
@@ -350,16 +354,6 @@ path {
   text-align: center;
 }
 
-#skills .titulo-seccion {
-  text-align: center;
-  font-size: 22px;
-  text-transform: uppercase;
-  color: #111135;
-  text-decoration: underline;
-  text-decoration-color: var(--color-enfasis);
-  text-decoration-thickness: 5px;
-  margin-bottom: 2.5rem;
-}
 .contenedor-skills .skill {
   display: flex;
   flex-wrap: wrap;
@@ -367,7 +361,7 @@ path {
   opacity: 1;
   transform: none;
   max-width: 600px;
-  margin: 30px auto;
+  margin: 0px auto;
 }
 .skill div {
   display: flex;
@@ -427,76 +421,50 @@ path {
 /* *********************/
 /* seccion P O R T F O L I O */
 /* *********************/
-#portfolio {
-  max-width: 1100px;
-  padding: 100px 15px 20px;
-  margin: auto;
-}
-
-#portfolio .titulo-seccion {
-  text-align: center;
-  font-size: 22px;
-  text-transform: uppercase;
-  color: #111135;
-  text-decoration: underline;
-  text-decoration-color: var(--color-enfasis);
-  text-decoration-thickness: 5px;
-}
-
-#portfolio .fila {
+.gallery {
   display: flex;
-  justify-content: space-between;
-  margin: 30px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-
-#portfolio .fila .proyecto {
-  max-width: 450px;
-  border: 1px solid #000;
-  margin: 0 10px;
-  position: relative;
+.image {
+  margin: .75rem;
+  width: 400px;
+  height: 225px;
   overflow: hidden;
 }
-
-#portfolio .fila .proyecto img {
+.image img {
   width: 100%;
   height: 100%;
-  filter: grayscale(1);
   object-fit: cover;
-  transition: 0.5s;
+  filter: grayscale(1);
+  transition: transform 0.5s;
 }
-
-#portfolio .fila .proyecto:hover img {
+.image:hover img {
   filter: grayscale(0);
+  transform: scale(1.1);
 }
-
-#portfolio .fila .proyecto .info {
-  position: absolute;
+.image .info {
+  position: relative;
   left: 0px;
   background-color: rgba(0, 0, 0, 0.8);
+  font-size: .75rem;
   color: #fff;
   width: 100%;
-  padding: 10px;
+  padding: 1rem;
   opacity: 0;
-  bottom: -40px;
-  transition: 0.5s;
+  bottom: 0px;
+  transition: 1s;
+}
+.image:hover .info{
+  opacity:1;
+  bottom:3.8rem;
 }
 
-#portfolio .fila .proyecto:hover .info {
-  opacity: 1;
-  bottom: 0;
-}
+
 /* *********************/
 /* seccion C O N T A C T O */
 /* *********************/
-
-#contacto {
-  padding: 100px 15px 50px;
-  background-color: #f3f3f3;
-}
-
-#contacto .titulo-seccion {
-  margin-bottom: 40px;
-}
 
 #contacto .contenedor-form {
   max-width: 1100px;
@@ -526,16 +494,6 @@ path {
 
 #contacto .contenedor-form .input-full {
   width: 100%;
-}
-
-#contacto .titulo-seccion {
-  text-align: center;
-  font-size: 22px;
-  text-transform: uppercase;
-  color: #111135;
-  text-decoration: underline;
-  text-decoration-color: var(--color-enfasis);
-  text-decoration-thickness: 5px;
 }
 
 #contacto .btn-enviar {
