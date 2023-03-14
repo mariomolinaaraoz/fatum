@@ -144,18 +144,64 @@
             </div>
           </div>
         </header>
-        <div class="presentacion">
-          <h1 class="bienvenida">Bienvenidos</h1>
-          <h2>Somos <span>FATUM</span>, construimos</h2>
-          <h3>Estructuras Metálicas y Naves Industriales</h3>
-          <p class="descripcion">
-            Con más de 40 años de trayectoria, nos especializamos en estructuras
-            metálicas, naves industriales, fabricadas con la mas alta
-            tecnología, capacidad profesional. Contamos con equipamiento para
-            atender proyectos llave en mano de media y gran escala.
-          </p>
-          <a href="#portfolio">Nuestras Obras</a>
-        </div>
+
+        <div igit d="hero">
+          <div class="presentacion">
+            <h1 class="bienvenida">Bienvenidos</h1>
+            <h2>Somos <span>FATUM</span>, construimos</h2>
+            <h3>Estructuras Metálicas y Naves Industriales</h3>
+            <p class="descripcion">
+              Con más de 40 años de trayectoria, nos especializamos en estructuras
+              metálicas, naves industriales, fabricadas con la mas alta
+              tecnología, capacidad profesional. Contamos con equipamiento para
+              atender proyectos llave en mano de media y gran escala.
+            </p>
+            <a href="#portfolio">Nuestras Obras</a>
+          </div>
+  
+          <div id="slideshow">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+  
+              <!-- Full-width images with number and caption text -->
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="./assets/img/works/work-11.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+              </div>
+    
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="./assets/img/works/work-10.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+              </div>
+    
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="./assets/img/works/work-9.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+              </div>
+    
+              <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="./assets/img/works/work-8.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+              </div>
+    
+              <!-- Next and previous buttons -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+        </div>        
+
       </div>
     </section>
 
@@ -249,42 +295,47 @@
       <h3 class="titulo-seccion">Nuestros SERVICIOS</h3>
       <div class="fila">
         <div class="servicio">
-          <span class="icono"> <i class="fa-sharp fa-regular fa-warehouse-full"></i></span>
-          <h4>Estructuras Metálicas</h4>
+          <span class="icono"> <i class="fa-solid fa-industry"></i></span>
+          <h4>Estructuras metálicas</h4>
           <hr />          
           <p>
             Prestamos servicio especializado en la fabricación de estructuras metálicas, brindando soluciones innovadoras y de alta calidad para proyectos de construcción de diversos tipos.
           </p>
         </div>
         <div class="servicio">
-          <span class="icono"><i class="fa-solid fa-file-code"></i></span>
-          <h4>Naves industriales</h4>
-          <hr />
-          <ul class="servicios-tag">
-            <li>Web</li>
-            <li>Graphic</li>
-            <li>SEO</li>
-          </ul>
+          <span class="icono"><i class="fa-solid fa-swatchbook"></i></span>
+          <h4>Diseño</h4>
+          <hr />          
           <p>
-            I have been providing web design services with great success for 9
-            years. The client is very happy
+            Ofrecemos un servicio llave en mano que se encarga de todo el proceso, desde el diseño hasta la construcción y la entrega final de la nave industrial.
           </p>
         </div>
         <div class="servicio">
-          <span class="icono"><i class="fa-solid fa-arrow-trend-up"></i></span>
-          <h4>Corte y plegado</h4>
-          <hr />
-          <ul class="servicios-tag">
-            <li>Web</li>
-            <li>Graphic</li>
-            <li>SEO</li>
-          </ul>
+          <span class="icono"><i class="fa-solid fa-warehouse"></i></span>
+          <h4>Naves industriales</h4>
+          <hr />          
           <p>
-            I have been providing web design services with great success for 9
-            years. The client is very happy
+            Ofrecemos un servicio llave en mano que se encarga de todo el proceso, desde el diseño hasta la construcción y la entrega final de la nave industrial.
           </p>
         </div>
+        <!-- <div class="servicio">
+          <span class="icono"><i class="fa-solid fa-scissors"></i></span>
+          <h4>Corte y plegado</h4>
+          <hr />          
+          <p>
+            Nuestro servicio de corte y plegado de chapa puede manejar una amplia gama materiales y espesores, desde 0,5 mm hasta 1/2" pulgada.
+          </p>
+        </div>
+        <div class="servicio">
+          <span class="icono"><i class="fa-solid fa-crop"></i></span>
+          <h4>Corte con pantografo</h4>
+          <hr />
+          <p>
+            Nuestro servicio de corte y plegado de chapa puede manejar una amplia gama materiales y espesores, desde 0,5 mm hasta 1/2" pulgada.
+          </p>
+        </div> -->
       </div>
+      <button type="button" class="masServicios">Conoce mas de nuestros servicios</button>
       <!-- <div class="fila">
         <div class="servicio">
           <span class="icono"><i class="fa-solid fa-database"></i></span>
@@ -334,7 +385,7 @@
     </section>
 
     <!-- SECCION H A B I L I D A D E S -->
-    <section id="skills">
+    <!-- <section id="skills">
       <div class="contenedor-skills">
         <h3 class="titulo-seccion">Equipamientos</h3>
         <section class="skill">
@@ -592,7 +643,7 @@
           </div>
         </section>
       </div>
-    </section>
+    </section> -->
 
     <!-- SECCION P O R T A F O L I O -->
     <section id="portfolio" class="headline load-hidden">
@@ -600,7 +651,7 @@
       <div class="gallery">
         <div class="image">
           <a href="./assets/img/works/work-11.jpg" data-fancybox="gallery" data-caption="Sitio Personal - Página Web personal y api minería.">
-            <img src="./assets/img/works/work-11.jpg" alt="Portfolio 1"/>
+            <img src="./assets/img/works/tumb-work-11.jpg" alt="Portfolio 1"/>
           </a>
           <div class="info">
             <h4>Sitio Personal</h4>
@@ -609,7 +660,7 @@
         </div>
         <div class="image">
           <a href="./assets/img/works/work-10.jpg" data-fancybox="gallery" data-caption="Web de recetas y tienda - Proyecto full stack, con instancias backend.">
-            <img src="./assets/img/works/work-10.jpg" alt="Sitio de Recetas"/>
+            <img src="./assets/img/works/tumb-work-10.jpg" alt="Sitio de Recetas"/>
           </a>
           <div class="info">
             <h4>Web de recetas y tienda</h4>
@@ -618,7 +669,7 @@
         </div>
         <div class="image">
           <a href="./assets/img/works/work-9.jpg" data-fancybox="gallery" data-caption="Portfolio - Html, CSS, JS.">
-            <img src="./assets/img/works/work-9.jpg" alt="Portfolio 2"/>
+            <img src="./assets/img/works/tumb-work-9.jpg" alt="Portfolio 2"/>
           </a>
           <div class="info">
             <h4>Portfolio</h4>
@@ -627,7 +678,7 @@
         </div>
         <div class="image">
           <a href="./assets/img/works/work-8.jpg" data-fancybox="gallery" data-caption="Landing Page - Electric cars site.">
-            <img src="./assets/img/works/work-8.jpg" alt="Sitio de Autos Electricos"/>
+            <img src="./assets/img/works/tumb-work-8.jpg" alt="Sitio de Autos Electricos"/>
           </a>
           <div class="info">
             <h4>Landing Page BMW</h4>
