@@ -86,123 +86,119 @@
   <body>
     <!-- SECCION I N I C I O -->
     <section id="inicio">
-      <div class="contenido">
-        <header>
-          <div class="contenido-header">
-            <a href="https://www.fatum.com.ar/">
-              <img src="./assets/img/logo.png" width="100rem" alt="logo" />
-            </a>
-            <nav id="nav" class="">
-              <ul id="links">
-                <li>
-                  <a
-                    href="#inicio"
-                    class="seleccionado"
-                    onclick="seleccionar(this)"
-                    >INICIO</a
-                  >
-                </li>
-                <li>
-                  <a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a>
-                </li>
-                <li>
-                  <a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a>
-                </li>
-                <li>
-                  <a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a>
-                </li>
-                <li>
-                  <a href="#contacto" onclick="seleccionar(this)">CONTACTO</a>
-                </li>
-              </ul>
-            </nav>
-            <div id="icono-nav" onclick="responsiveMenu()">
-              <i class="fa-solid fa-bars"></i>
-            </div>
-            <div class="redes">
-              <a
-                rel="noopener"
-                href="https://www.youtube.com/@mariomolinaaraoz7895"
-                target="_blank"
-                title="Youtube Channel"
-                ><i class="fa-brands fa-youtube"></i
-              ></a>
-              <a
-                rel="noopener"
-                href="https://github.com/mariomolinaaraoz"
-                target="_blank"
-                title="GitHub repository"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-              <a
-                rel="noopener"
-                href="https://www.instagram.com/mariomolinaaraoz/"
-                target="_blank"
-                title="Instragam"
-                ><i class="fa-brands fa-instagram-square"></i
-              ></a>
-            </div>
+      <header>
+        <div class="contenido-header">
+          <a href="https://www.fatum.com.ar/">
+            <img src="./assets/img/logo.png" width="100rem" alt="logo" />
+          </a>
+          <nav id="nav" class="">
+            <ul id="links">
+              <li>
+                <a
+                  href="#inicio"
+                  class="seleccionado"
+                  onclick="seleccionar(this)"
+                  >INICIO</a
+                >
+              </li>
+              <li>
+                <a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a>
+              </li>
+              <li>
+                <a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a>
+              </li>
+              <li>
+                <a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a>
+              </li>
+              <li>
+                <a href="#contacto" onclick="seleccionar(this)">CONTACTO</a>
+              </li>
+            </ul>
+          </nav>
+          <div id="icono-nav" onclick="responsiveMenu()">
+            <i class="fa-solid fa-bars"></i>
           </div>
-        </header>
+          <div class="redes">
+            <a
+              rel="noopener"
+              href="https://www.youtube.com/@mariomolinaaraoz7895"
+              target="_blank"
+              title="Youtube Channel"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a
+              rel="noopener"
+              href="https://github.com/mariomolinaaraoz"
+              target="_blank"
+              title="GitHub repository"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              rel="noopener"
+              href="https://www.instagram.com/mariomolinaaraoz/"
+              target="_blank"
+              title="Instragam"
+              ><i class="fa-brands fa-instagram-square"></i
+            ></a>
+          </div>
+        </div>
+      </header>
+    </section>
 
-        <div igit d="hero">
-          <div class="presentacion">
-            <h1 class="bienvenida">Bienvenidos</h1>
-            <h2>Somos <span>FATUM</span>, construimos</h2>
-            <h3>Estructuras Metálicas y Naves Industriales</h3>
-            <p class="descripcion">
-              Con más de 40 años de trayectoria, nos especializamos en estructuras
-              metálicas, naves industriales, fabricadas con la mas alta
-              tecnología, capacidad profesional. Contamos con equipamiento para
-              atender proyectos llave en mano de media y gran escala.
-            </p>
-            <a href="#portfolio">Nuestras Obras</a>
-          </div>
-  
-          <div id="slideshow">
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-  
-              <!-- Full-width images with number and caption text -->
-              <div class="mySlides fade">
-                <div class="numbertext">1 / 4</div>
-                <img src="./assets/img/works/work-11.jpg" style="width:100%">
-                <div class="text">Caption Text</div>
-              </div>
-    
-              <div class="mySlides fade">
-                <div class="numbertext">2 / 4</div>
-                <img src="./assets/img/works/work-10.jpg" style="width:100%">
-                <div class="text">Caption Two</div>
-              </div>
-    
-              <div class="mySlides fade">
-                <div class="numbertext">3 / 4</div>
-                <img src="./assets/img/works/work-9.jpg" style="width:100%">
-                <div class="text">Caption Three</div>
-              </div>
-    
-              <div class="mySlides fade">
-                <div class="numbertext">4 / 4</div>
-                <img src="./assets/img/works/work-8.jpg" style="width:100%">
-                <div class="text">Caption Three</div>
-              </div>
-    
-              <!-- Next and previous buttons -->
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <section id="hero">
+      <h1 class="bienvenida">Bienvenidos</h1>
+      <h2>Somos <span>FATUM</span>, construimos</h2>
+      <h3>Estructuras Metálicas y Naves Industriales</h3>
+      <div class="container">
+        <p class="descripcion">
+          Con más de 40 años de trayectoria, nos especializamos en estructuras
+          metálicas, naves industriales, fabricadas con la mas alta
+          tecnología, capacidad profesional. Contamos con equipamiento para
+          atender proyectos llave en mano de media y gran escala.
+        </p>
+        <div id="slideshow">
+          <!-- Slideshow container -->
+          <div class="slideshow-container">
+            
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 4</div>
+              <img src="./assets/img/works/work-11.jpg" style="width:100%"/>
+              <div class="text">Caption Text</div>
             </div>
-            <br>
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-              <span class="dot" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
-              <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-          </div>
-        </div>        
 
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img src="./assets/img/works/work-10.jpg" style="width:100%"/>
+              <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img src="./assets/img/works/work-9.jpg" style="width:100%"/>
+              <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 4</div>
+              <img src="./assets/img/works/work-8.jpg" style="width:100%"/>
+              <div class="text">Caption Three</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+          </div>
+          <br>
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
       </div>
+      <a href="#portfolio">Nuestras Obras</a>
     </section>
 
     <!-- SECCION FLOATING BUTTON -->
@@ -336,52 +332,6 @@
         </div> -->
       </div>
       <button type="button" class="masServicios">Conoce mas de nuestros servicios</button>
-      <!-- <div class="fila">
-        <div class="servicio">
-          <span class="icono"><i class="fa-solid fa-database"></i></span>
-          <h4>Alojamiento de Sitios</h4>
-          <hr />
-          <ul class="servicios-tag">
-            <li>Web</li>
-            <li>Graphic</li>
-            <li>SEO</li>
-          </ul>
-          <p>
-            I have been providing web design services with great success for 9
-            years. The client is very happy
-          </p>
-        </div>
-        <div class="servicio">
-          <span class="icono"><i class="fa-solid fa-palette"></i></span>
-          <h4>Diseñador Gráfico</h4>
-          <hr />
-          <ul class="servicios-tag">
-            <li>Web</li>
-            <li>Graphic</li>
-            <li>SEO</li>
-          </ul>
-          <p>
-            I have been providing web design services with great success for 9
-            years. The client is very happy
-          </p>
-        </div>
-        <div class="servicio">
-          <span class="icono"
-            ><i class="fa-solid fa-person-circle-question"></i
-          ></span>
-          <h4>Consultor Externo</h4>
-          <hr />
-          <ul class="servicios-tag">
-            <li>Web</li>
-            <li>Graphic</li>
-            <li>SEO</li>
-          </ul>
-          <p>
-            I have been providing web design services with great success for 9
-            years. The client is very happy
-          </p>
-        </div>
-      </div> -->
     </section>
 
     <!-- SECCION H A B I L I D A D E S -->

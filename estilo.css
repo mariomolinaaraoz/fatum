@@ -15,27 +15,142 @@ html.sr .load-hidden {
 /* *********************/
 /* seccion I N I C I O */
 /* *********************/
-
-#hero {
-  display: flex;
-  justify-content: space-around;
+#inicio header a {
+  text-decoration: none;
 }
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: absolute;  
-  top:20rem;
+#inicio header {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+}
+#inicio header .contenido-header {
+  max-width: 1100px;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
-
-/* Hide the images by default */
-.mySlides {
+#inicio header .contenido-header h1 {
+  text-align: center;
+  color: var(--color-enfasis);
+}
+#inicio header .contenido-header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+#inicio header .contenido-header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 12px;
+  font-weight: 400;
+  transition: 0.5s;
+}
+#inicio header .contenido-header nav ul li a:hover {
+  color: var(--color-enfasis);
+}
+#inicio header .contenido-header .redes a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  margin-left: 10px;
+  transition: 0.5s;
+}
+#inicio header .contenido-header .redes a:hover {
+  color: var(--color-enfasis);
+}
+#inicio header .contenido-header .seleccionado {
+  color: var(--color-enfasis);
+}
+#inicio header #icono-nav {
+  color: #fff;
   display: none;
 }
+/* *********************/
+/* seccion H E R O */
+/* *********************/
 
+#hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./assets/img/bg.jpg");
+  background-size: cover;
+  background-position: center center;
+
+  height: 100vh;
+  margin: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#hero .bienvenida {
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+#hero h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+#hero h3 {  font-size: 30px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+#hero h2 span {
+  font-size: 55px;
+  color: var(--color-enfasis);
+}
+#hero a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 25px;
+  padding: 20px 25px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+#hero a:hover {
+  background-color: var(--color-enfasis);
+}
+#hero .container{
+  max-width: 1100px;
+  display: flex;
+  flex-direction: row;
+}
+#hero .container .descripcion {
+  max-width: 700px;
+  margin: 30px auto;
+  line-height: 2.2rem;
+  font-size: 16px;
+  text-align: center;
+}
+/* Slideshow container */
+#hero .container #slideshow {
+  max-width: 550px;
+  /* height: 100vh; */
+  margin: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* Hide the images by default */
+#hero #slideshow .mySlides {
+  display: none;
+}
 /* Next & previous buttons */
-.prev, .next {
+#hero #slideshow .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -49,40 +164,33 @@ html.sr .load-hidden {
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
 /* Position the "next button" to the right */
-.next {
+#hero #slideshow .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+#hero #slideshow .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
-
 /* Caption text */
-.text {
+#hero #slideshow .text {
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
   width: 100%;
   text-align: center;
 }
-
 /* Number text (1/3 etc) */
-.numbertext {
+#hero #slideshow .numbertext {
   color: #f2f2f2;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
 }
-
 /* The dots/bullets/indicators */
-.dot {
+#hero #slideshow .dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -92,160 +200,17 @@ html.sr .load-hidden {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
-.active, .dot:hover {
+#hero #slideshow .active, .dot:hover {
   background-color: #717171;
 }
-
 /* Fading animation */
-.fade {
+#hero #slideshow .fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
-}
-
-
-
-
-
-
-#logo {
-  color: aqua;
-}
-
-#inicio {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("./assets/img/bg.jpg");
-  background-size: cover;
-  background-position: center center;
-  height: 100vh;
-}
-
-#inicio .contenido header a {
-  text-decoration: none;
-}
-
-#inicio .contenido header {
-  background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-  top: 0;
-}
-
-#inicio .contenido header .contenido-header {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-#inicio .contenido header .contenido-header h1 {
-  text-align: center;
-  color: var(--color-enfasis);
-}
-
-#inicio .contenido header .contenido-header nav ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-
-#inicio .contenido header .contenido-header nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  margin: 0 12px;
-  font-weight: 400;
-  transition: 0.5s;
-}
-
-#inicio .contenido header .contenido-header nav ul li a:hover {
-  color: var(--color-enfasis);
-}
-
-#inicio .contenido header .contenido-header .redes a {
-  text-decoration: none;
-  color: #fff;
-  display: inline-block;
-  margin-left: 10px;
-  transition: 0.5s;
-}
-
-#inicio .contenido header .contenido-header .redes a:hover {
-  color: var(--color-enfasis);
-}
-
-#inicio .contenido header .contenido-header .seleccionado {
-  color: var(--color-enfasis);
-}
-
-#inicio .contenido .presentacion {
-  max-width: 1100px;
-  height: 100vh;
-  margin: auto;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#inicio .contenido .presentacion .bienvenida {
-  font-size: 16px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-#inicio .contenido .presentacion h2 {
-  font-size: 20px;
-  margin-bottom: 5px;
-  text-align: center;
-}
-#inicio .contenido .presentacion h3 {
-  font-size: 30px;
-  margin-bottom: 25px;
-  text-align: center;
-}
-
-#inicio .contenido .presentacion h2 span {
-  font-size: 55px;
-  color: var(--color-enfasis);
-}
-
-#inicio .contenido .presentacion .descripcion {
-  max-width: 700px;
-  margin: 30px auto;
-  line-height: 2.2rem;
-  font-size: 16px;
-  text-align: center;
-}
-
-#inicio .contenido .presentacion a {
-  text-decoration: none;
-  display: inline-block;
-  margin: 25px;
-  padding: 20px 25px;
-  border: 2px solid #fff;
-  border-radius: 50px;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: 0.5s;
-}
-
-#inicio .contenido .presentacion a:hover {
-  background-color: var(--color-enfasis);
-}
-
-#icono-nav {
-  color: #fff;
-  display: none;
 }
 /* *********************/
 /* seccion FLOATING BUTTON */
@@ -560,13 +525,10 @@ footer a {
 /* *********************/
 
 @media screen and (max-width: 800px) {
-  .redes {
+  #inicio header nav {
     display: none;
-  }
-  nav {
-    display: none;
-  }
-  nav.responsive {
+  }  
+  #inicio header nav.responsive {
     display: block;
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
@@ -575,17 +537,20 @@ footer a {
     left: 0;
     padding: 10px 0;
   }
-  nav.responsive ul {
+  #inicio header nav.responsive ul {
     display: block !important;
     text-align: center;
   }
-  nav.responsive ul li {
+  #inicio header nav.responsive ul li {
     margin: 5px 0;
-  }linear
-  #icono-nav {
+  }
+  #inicio header #icono-nav {
     display: block;
   }
-  #inicio .contenido .presentacion h2 {
+  #inicio header .redes {
+    display: none;
+  }
+  #inicio #hero .presentacion h2 {
     font-size: 40px;
   }
   /* seccion SOBRE MI */
@@ -617,20 +582,9 @@ footer a {
   #servicios .fila .servicio {
     margin: 10px auto;
   }
-  /* seccion HABLIDADES MI */
-  .contenedor-skills {
-    padding: 50px 20px 2px;
-  }
   /* seccion PORTFOLIO */
-  #portfolio {
-    padding: 50px 0 0;
-  }
-  #portfolio .fila {
-    display: block;
-  }
-  #portfolio .fila .proyecto {
-    margin: 10px auto;
-  }
+
+
   /* seccion CONTACTO */
   #contacto {
     padding: 50px 15px;
