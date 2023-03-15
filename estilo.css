@@ -147,7 +147,7 @@ html.sr .load-hidden {
   color: #f2f2f2;
   font-size: 1rem;
   padding: .5rem .75rem;
-  margin-top: -2rem;
+  margin-top: -2.4rem;
   width: 100%;
   text-align: center;
 }
@@ -355,18 +355,21 @@ html.sr .load-hidden {
   line-height: 22px;
 }
 #servicios button.masServicios{
+  width: 100%;
   margin:2rem auto .5rem;
   background-color:  #d3d3d3;
   border: 1px solid red;
   padding: .5rem 2rem;
-  border-radius: 1rem;
-  font-size: 1.5rem;
+  border-radius: .25rem;
+  font-size: 1.75rem;
+  font-weight: 900;
   color:red;
 }
 #servicios button.masServicios:hover {  
-  background-color:red ;
-  border: 1px solid#fff;  
-  color:#fff;
+  /* background-color:red ; */
+  /* border: 1px solid#fff;   */
+  /* color:#fff; */
+  cursor: pointer;
 }
 
 /* *********************/
