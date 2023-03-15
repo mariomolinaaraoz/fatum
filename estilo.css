@@ -192,6 +192,16 @@ html.sr .load-hidden {
 /* *********************/
 /* seccion FLOATING BUTTON */
 /* *********************/
+#email_icon {
+  position: fixed;
+  top:40rem;
+  right: 2rem;
+  filter: drop-shadow(0 .0625rem .25rem rgba(0,0,0,.5));
+}
+#email_icon i{
+  font-size: 3rem;
+  color:#fff;
+}
 #linkedin {
   position: fixed;
   top:45rem;
@@ -230,7 +240,6 @@ html.sr .load-hidden {
 /* *********************/
 /* S E C C I O N E S */
 /* *********************/
-
 #servicios, #skills, #portfolio, #contacto {
   padding: 50px 15px 50px;
   text-align: center;
