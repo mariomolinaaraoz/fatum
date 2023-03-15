@@ -192,20 +192,28 @@ html.sr .load-hidden {
 /* *********************/
 /* seccion FLOATING BUTTON */
 /* *********************/
-#whatsapp {
-  width: 2rem;
-  height: auto;
+#linkedin {
   position: fixed;
-  top:49rem;
-  right: 4rem;
-  filter: drop-shadow(0 .0625rem .25rem rgba(0,0,0,.4));
+  top:45rem;
+  right: 2rem;
+  filter: drop-shadow(0 .0625rem .25rem rgba(0,0,0,.5));
+}
+#linkedin i{
+  font-size: 3rem;
+  color:#0A66C2;
+}
+
+#whatsapp {
+  position: fixed;
+  top:50rem;
+  right: 2rem;
+  filter: drop-shadow(0 .0625rem .25rem rgba(0,0,0,.5));
   animation: pulse 2s infinite;
+  
 }
-#whatsapp circle {
-  fill: #25d366;
-}
-#whatsapp path {
-  fill: #fff;
+#whatsapp i{
+  font-size: 3rem;
+  color:#25D366;
 }
 @keyframes pulse {
   0% {
@@ -492,8 +500,8 @@ footer #copyright {
     display: block;
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
-    position: fixed;
-    top: 0px;
+    position: absolute;
+    top: 55px;
     left: 0;
     padding: 10px 0;
   }

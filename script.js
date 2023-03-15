@@ -1,3 +1,4 @@
+//Función que arma el slideshow
 let slideIndex = 0;
 showSlides();
 
@@ -54,8 +55,6 @@ function adjustImageSize() {
   });
 }
 
-
-
 //Función que me aplica el estilo a la opciòn seleccionada y quita la previamente seleccionada
 function seleccionar(link) {
   var opciones = document.querySelectorAll("#links  a");
@@ -77,8 +76,8 @@ function responsiveMenu() {
   }
 }
 
+//función que envia el correo desde contacto
 const btn = document.getElementById("button_form_contact");
-
 document
   .getElementById("form_contact")
   .addEventListener("submit", function (event) {
