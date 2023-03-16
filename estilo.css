@@ -100,7 +100,7 @@ html.sr .load-hidden {
   text-align: center;
 }
 #hero h2.bienvenida span{
-  font-size: 3.4375rem;
+  font-size: 3.5rem;
   color: var(--color-enfasis);
 }
 #hero h3.bienvenida{
@@ -114,14 +114,13 @@ html.sr .load-hidden {
   display: flex;
   flex-direction: row;
   gap:3rem;
-  align-items: center;
-  
+  align-items: center;  
 }
 #hero .container .descripcion {
   max-width: 34rem;
-  margin: 2rem auto;
-  line-height: 2.2rem;
-  font-size: 1rem;
+  margin: .8rem auto 2.5rem;
+  line-height: 3rem;
+  font-size: 1.25rem;
   text-align: center;
 }
 /* Slideshow container */
@@ -194,7 +193,7 @@ html.sr .load-hidden {
 /* *********************/
 #email_icon {
   position: fixed;
-  top:30rem;
+  top:45rem;
   right: 2rem;
   filter: drop-shadow(0 .0625rem .25rem rgba(0,0,0,.5));
 }
@@ -204,7 +203,7 @@ html.sr .load-hidden {
 }
 #linkedin {
   position: fixed;
-  top:35rem;
+  top:50rem;
   right: 2rem;
   filter: drop-shadow(0 .0625rem .25rem rgba(0,0,0,.5));
 }
@@ -212,10 +211,9 @@ html.sr .load-hidden {
   font-size: 3rem;
   color:#0A66C2;
 }
-
 #whatsapp {
   position: fixed;
-  top:40rem;
+  top:55rem;
   right: 2rem;
   filter: drop-shadow(0 .0625rem .25rem rgba(0,0,0,.5));
   animation: pulse 2s infinite;
@@ -241,84 +239,111 @@ html.sr .load-hidden {
 /* S E C C I O N E S */
 /* *********************/
 #servicios, #skills, #portfolio, #contacto {
-  padding: 50px 15px 50px;
+  padding: 3rem 2rem;
   text-align: center;
   background-color: #f3f3f3;
 }
 .titulo-seccion {
   text-align: center;
-  font-size: 22px;
+  font-size: 1.5rem;
   text-transform: uppercase;
   color: #111135;
   text-decoration: underline;
   text-decoration-color: var(--color-enfasis);
-  text-decoration-thickness: 5px;
+  text-decoration-thickness: .3rem;
   margin-bottom: 3rem;
 }
 
 /* *********************/
 /* seccion S O B R E  M I */
 /* *********************/
+
 #sobremi {
-  max-width: 1100px;
-  margin: auto;
-  margin-bottom: 50px;
-  padding: 80px 15px 20px;
+  max-width: 68.75rem;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: center;
   color: #111135;
   display: flex;
   background-color: white;
 }
 #sobremi .contenedor-foto {
-  max-width: 400px;
-  margin-right: 80px;
+  max-width: 25rem;
+  margin-right: 3rem;  
 }
 #sobremi .contenedor-foto img {
-  padding: 20px;
+  padding: 1.25rem;
   width: 100%;
-  border-radius: 20px;
+  border-radius: .75rem;
   background-color: #f3f3f3;
 }
 #sobremi .sobremi {
-  margin: 0 40px;
+  margin: 0 auto;
 }
 #sobremi .sobremi .titulo-seccion {
-  font-size: 22px;
+  font-size: 2rem;
+  font-weight: bold;
   text-transform: uppercase;
   color: #111135;
   text-decoration: underline;
   text-decoration-color: var(--color-enfasis);
-  text-decoration-thickness: 5px;
-}
-#sobremi .sobremi h2 {
-  font-size: 34px;
-  font-weight: bold;
-  margin: 20px 0;
-  letter-spacing: 2px;
-}
-#sobremi .sobremi h2 span {
-  color: var(--color-enfasis);
+  text-decoration-thickness: .3rem;
+  margin: 0rem auto 1.5rem;
 }
 #sobremi .sobremi h3 {
-  font-size: 18px;
+  font-size: 1.25rem;
   font-weight: 500;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   letter-spacing: 1px;
+  text-align: center;
 }
 #sobremi .sobremi p {
-  font-size: 14px;
-  line-height: 25px;
+  max-width: 30rem;
+  font-size: 1rem;
+  line-height: 1.8rem;
+  text-align: left;
   color: #565656;
-  margin-bottom: 12px;
+  margin-bottom: 0.0625rem;
+}
+#sobremi .sobremi .read-more-state {
+  display: none;
+}
+#sobremi .sobremi .read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+#sobremi .sobremi .read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+#sobremi .sobremi .read-more-state ~ .read-more-trigger:before {
+  content: 'Ver más...';
+}
+#sobremi .sobremi .read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Ver menos...';
+}
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #d9d9d9;
+  font-size: .9em;
+  line-height: 2;
+  border: none;
+  border-radius: .25em;
 }
 #sobremi .sobremi a {
-  display: inline-block;
   text-decoration: none;
+  display: inline-block;
+  margin: 1.5rem auto;
+  padding: 1.25rem 1.5rem;
+  border: 0.125rem solid #000;
+  border-radius: .5rem;
   color: #000;
-  border-radius: 30px;
-  border: 1px solid #000;
-  padding: 10px 20px;
-  margin-top: 30px;
   transition: 0.5s;
 }
 #sobremi .sobremi a:hover {
@@ -432,7 +457,7 @@ html.sr .load-hidden {
 }
 #portfolio .image:hover .info{
   opacity:1;
-  bottom:3.8rem;
+  bottom:4rem;
 }
 
 /* *********************/
@@ -493,6 +518,7 @@ footer a {
   font-size: 26px;
 }
 footer #copyright {
+  margin:.5rem auto;
   font-size: 0.75rem;
   color: #919191;
 }
@@ -501,14 +527,189 @@ footer #copyright {
 /* *********************/
 
 /* `xxl` applies to x-large devices (large desktops, less than 1400px)*/
-/* @media screen and (max-width: 1400px) { ... } */
+@media screen and (max-width: 1400px) {
+  /* seccion FLOATING BUTTON */
+  #email_icon {  
+    top:35rem;
+    right: 1.5rem;  
+  }
+  #email_icon i{  
+    font-size: 2.25rem;
+  }
+  #linkedin {
+    top:39rem;
+    right: 1.5rem;
+  }
+  #linkedin i{  
+    font-size: 2.25rem;
+  }
+  #whatsapp {
+    top:43rem;
+    right: 1.5rem;
+  }
+  #whatsapp i{  
+    font-size: 2.25rem;
+  }
+  /* seccion HERO */
+  #hero{
+    padding: 1rem 1.5rem 1rem;
+  }
+  #hero h1.bienvenida{
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    margin-bottom: .75rem;    
+  }
+  #hero h2.bienvenida{
+    margin-bottom: .32rem;
+  }
+  #hero h2.bienvenida span{
+    font-size: 3rem;
+  }
+  #hero h3.bienvenida{
+    font-size: 1.75rem;
+    margin-bottom: 2.5rem;
+  }  
+  #hero .container {
+    margin: 0 auto;
+    gap:.75rem;
+  }
+  #hero .container .descripcion {
+    max-width: 34rem;
+    margin: 0 auto;
+    line-height: 2.2rem;
+    font-size: 1.25rem;
+  }
+  #hero .container #slideshow {
+    max-width: 30rem;
+  }
+  #hero a {
+    margin: 3rem auto 1rem;
+    padding: 1.25rem 1.5rem;
+    border: 0.125rem solid #fff;
+    border-radius: .5rem;
+  }
+}
 
 /* `xl` applies to large devices (desktops, less than 1200px)*/
-/* @media screen and (max-width: 1200px) { ... } */
+@media screen and (max-width: 1200px) {
+  /* seccion FLOATING BUTTON */
+  #email_icon {  
+    top:35rem;
+    right: 1.5rem;  
+  }
+  #email_icon i{  
+    font-size: 2.25rem;
+  }
+  #linkedin {
+    top:39rem;
+    right: 1.5rem;
+  }
+  #linkedin i{  
+    font-size: 2.25rem;
+  }
+  #whatsapp {
+    top:43rem;
+    right: 1.5rem;
+  }
+  #whatsapp i{  
+    font-size: 2.25rem;
+  }
+  /* seccion HERO */
+  #hero{
+    padding: 1rem 1.5rem 1rem;
+  }
+  #hero h1.bienvenida{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: .75rem;    
+  }
+  #hero h2.bienvenida{
+    margin-bottom: .32rem;
+  }
+  #hero h2.bienvenida span{
+    font-size: 3rem;
+  }
+  #hero h3.bienvenida{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }  
+  #hero .container {
+    margin: 0 auto;
+    gap:.75rem;
+  }
+  #hero .container .descripcion {
+    max-width: 34rem;
+    margin: 0 auto;
+    line-height: 2.2rem;
+    font-size: 1.25rem;
+  }
+  #hero .container #slideshow {
+    max-width: 30rem;
+  }
+  #hero a {
+    margin: 3rem auto 1rem;
+    padding: 1.25rem 1.5rem;
+    border: 0.125rem solid #fff;
+    border-radius: .5rem;
+  }
+}
 
 /* `lg` applies to medium devices (tablets, less than 992px)*/
-/* @media screen and (max-width: 992px) { ... } */
-
+@media screen and (max-width: 992px) {
+  /* seccion FLOATING BUTTON */
+  #email_icon {  
+    top:35rem;
+    right: 1.5rem;  
+  }
+  #email_icon i{  
+    font-size: 2.25rem;
+  }
+  #linkedin {
+    top:39rem;
+    right: 1.5rem;
+  }
+  #linkedin i{  
+    font-size: 2.25rem;
+  }
+  #whatsapp {
+    top:43rem;
+    right: 1.5rem;
+  }
+  #whatsapp i{  
+    font-size: 2.25rem;
+  }
+  /* seccion HERO */
+  #hero{
+    padding: 1rem 1.5rem 1rem;
+  }
+  #hero h1.bienvenida{
+    margin-top: 2rem;
+    margin-bottom: 1.25rem;    
+  }
+  #hero h2.bienvenida{
+    margin-bottom: .32rem;
+  }
+  #hero h2.bienvenida span{
+    font-size: 2.5rem;
+  }
+  #hero h3.bienvenida{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }  
+  #hero .container {
+    margin: 0 auto;
+    gap:.75rem;
+  }
+  #hero .container .descripcion {
+    max-width: 34rem;
+    margin: .5rem auto;
+    line-height: 2.1rem;
+    font-size: 1rem;
+  }
+  #hero .container #slideshow {
+    max-width: 25rem;
+  }
+}
 /* `md` applies to small devices (landscape phones, less than 768px)*/
 @media screen and (max-width: 768px) {
   /* seccion INICIO */
@@ -568,24 +769,47 @@ footer #copyright {
     text-align: center;
   }
   /* seccion SOBRE MI */
-  #sobremi {
-    padding: 50px 0 0;
-    display: block;
-  }
   #sobremi .contenedor-foto {
-    max-width: 200px;
-    margin: auto;
+    max-width: 14rem;
+    margin-right: 3rem;  
   }
   #sobremi .contenedor-foto img {
-    padding: 8px;
-  }
+    padding: 1.rem;
+  }  
   #sobremi .sobremi .titulo-seccion {
+    font-size: 1.5rem;    
+    text-decoration-thickness: .2rem;
+    margin: 0rem auto 1rem;
+  }
+  #sobremi .sobremi h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+    letter-spacing: 1px;
     text-align: center;
   }
-  #sobremi .sobremi h2 {
-    font-size: 25px;
-    text-align: center;
+  #sobremi .sobremi p {
+    font-size: .9rem;
+    line-height: 1.7rem;
+
   }
+  .read-more-trigger {    
+    font-size: .9em;
+  }
+  #sobremi .sobremi a {
+    margin: 1rem auto;
+    padding: .75rem .75rem;
+    border: 0.05rem solid #000;
+    border-radius: .3rem;
+  }
+  #sobremi .sobremi a:hover {
+    background-color: var(--color-enfasis);
+    border:1px solid #fff;
+    color: #fff;
+    font-weight: bold;
+  }
+
   /* seccion MIS SERVICIOS */
   #servicios {
     padding: 50px 15px 20px;
@@ -597,7 +821,6 @@ footer #copyright {
     margin: 10px auto;
   }
   /* seccion PORTFOLIO */
-
 
   /* seccion CONTACTO */
   #contacto {
@@ -617,24 +840,155 @@ footer #copyright {
 @media screen and (max-width: 576px) {
  /* seccion FLOATING BUTTON */
   #email_icon {  
-    top:27rem;
-    right: 2rem;  
+    top:30rem;
+    right: 1.5rem;  
   }
   #email_icon i{  
     font-size: 1.75rem;
   }
   #linkedin {
-    top:30rem;
-    right: 2rem;
+    top:33rem;
+    right: 1.5rem;
   }
   #linkedin i{  
     font-size: 1.75rem;
   }
   #whatsapp {
-    top:33rem;
-    right: 2rem;
+    top:36rem;
+    right: 1.5rem;
   }
   #whatsapp i{  
     font-size: 1.75rem;
+  }
+/* seccion HERO */
+  #hero{
+    padding: 2rem 1rem 1rem;
+  }
+  #hero h1.bienvenida{
+    margin-top: 4rem;
+    margin-bottom: 1.25rem;    
+  }
+  #hero h2.bienvenida{
+    font-size: .8rem;
+    margin-bottom: .32rem;
+  }
+  #hero h2.bienvenida span{
+    font-size: 1.25rem;
+  }
+  #hero h3.bienvenida{
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+  }
+  #hero .container {
+    flex-direction: column !important;
+    margin: 0 auto;
+    gap:.5rem;
+  }
+  #hero .container .descripcion {
+    max-width: 34rem;
+    margin: 1rem auto;
+    line-height: 1.4rem;
+    font-size: .75rem;
+    text-align: center;
+  }
+  #hero .container #slideshow .text {
+    font-size: .8rem;
+    padding: .5rem .75rem;
+    margin-top: -2.2rem;
+  }
+  #hero a {
+    margin: 1.2rem auto 1.5rem;
+    padding: .5rem .75rem;
+    border: 0.125rem solid #fff;
+    border-radius: .25rem;    
+    font-size: .75rem;
+  }
+
+/* S E C C I O N E S */
+  #servicios, #skills, #portfolio, #contacto {
+    padding: 2rem 1rem;
+  }
+  .titulo-seccion {
+    font-size: 1rem;
+    text-decoration-thickness: .2rem;
+    margin-bottom: 2rem;
+  }
+/* seccion S O B R E  M I */
+  #sobremi {
+    padding: 2rem 1.25rem 0rem;  
+  }
+  #sobremi .sobremi .titulo-seccion {
+    font-size: 1.5rem;  
+    text-decoration-thickness: .2rem;
+    margin: .75rem auto 1rem;
+  }
+  #sobremi .sobremi h3 {
+    font-size: .8rem;  
+    margin: 0rem auto .75rem;
+    letter-spacing: 1px;  
+  }
+  #sobremi .sobremi p {
+    font-size: .75rem;
+    line-height: 1.2rem;
+    color: #565656;
+    margin-bottom: 0.0625rem;
+  }
+  #sobremi .sobremi a {
+    margin: .5rem auto 1.25rem;
+    padding: .75rem 1rem;
+    border-radius: .25rem;
+    font-size: .75rem;
+  }
+/* seccion S E R V I C I O S */
+  #servicios .fila .servicio .icono {
+    width: 4rem;
+    height: 4rem;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  #servicios .fila .servicio h4 {
+    font-size: .8rem;
+    margin-bottom: 1rem;
+  }
+  #servicios .fila .servicio hr {
+    width: 30%;
+    margin: auto;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+  #servicios .fila .servicio p {
+    font-size: .75rem;
+    line-height: 1.2rem;
+  }
+  #servicios button.masServicios{
+    font-size: 1rem;    
+  }
+/* seccion P O R T F O L I O */
+  #portfolio .image img {
+    filter: grayscale(0);
+  }  
+  #portfolio .image:hover .info{
+    padding: .5rem;
+    bottom:4em;
+  }
+  #portfolio .image .info h4, p{
+    font-size: .68rem;
+  }  
+  /* seccion C O N T A C T O */  
+  #contacto .contenedor-form .fila {
+    margin-bottom: .3rem auto 0;
+  }  
+  #contacto .contenedor-form input,
+  #contacto .contenedor-form textarea {
+    padding: .75rem .5rem;
+    border-radius: .5rem;
+    font-size: .75rem;
+    border: .03rem solid #919191;
+  }
+  #contacto .contenedor-form .mitad input {
+    width: 100%;
+  }
+  #contacto .btn-enviar {
+    margin: 1rem auto .5rem;
   }
 }
