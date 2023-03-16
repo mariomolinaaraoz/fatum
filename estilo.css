@@ -194,7 +194,7 @@ html.sr .load-hidden {
 /* *********************/
 #email_icon {
   position: fixed;
-  top:40rem;
+  top:30rem;
   right: 2rem;
   filter: drop-shadow(0 .0625rem .25rem rgba(0,0,0,.5));
 }
@@ -204,7 +204,7 @@ html.sr .load-hidden {
 }
 #linkedin {
   position: fixed;
-  top:45rem;
+  top:35rem;
   right: 2rem;
   filter: drop-shadow(0 .0625rem .25rem rgba(0,0,0,.5));
 }
@@ -215,7 +215,7 @@ html.sr .load-hidden {
 
 #whatsapp {
   position: fixed;
-  top:50rem;
+  top:40rem;
   right: 2rem;
   filter: drop-shadow(0 .0625rem .25rem rgba(0,0,0,.5));
   animation: pulse 2s infinite;
@@ -500,11 +500,21 @@ footer #copyright {
 /* seccion R E S P O N S I V E */
 /* *********************/
 
-@media screen and (max-width: 800px) {
+/* `xxl` applies to x-large devices (large desktops, less than 1400px)*/
+/* @media screen and (max-width: 1400px) { ... } */
+
+/* `xl` applies to large devices (desktops, less than 1200px)*/
+/* @media screen and (max-width: 1200px) { ... } */
+
+/* `lg` applies to medium devices (tablets, less than 992px)*/
+/* @media screen and (max-width: 992px) { ... } */
+
+/* `md` applies to small devices (landscape phones, less than 768px)*/
+@media screen and (max-width: 768px) {
   /* seccion INICIO */
   #inicio header nav {
     display: none;
-  }  
+  }
   #inicio header nav.responsive {
     display: block;
     background-color: rgba(0, 0, 0, 0.8);
@@ -603,5 +613,28 @@ footer #copyright {
   }
 }
 
-
-
+/* `sm` applies to x-small devices (portrait phones, less than 576px)*/
+@media screen and (max-width: 576px) {
+ /* seccion FLOATING BUTTON */
+  #email_icon {  
+    top:27rem;
+    right: 2rem;  
+  }
+  #email_icon i{  
+    font-size: 1.75rem;
+  }
+  #linkedin {
+    top:30rem;
+    right: 2rem;
+  }
+  #linkedin i{  
+    font-size: 1.75rem;
+  }
+  #whatsapp {
+    top:33rem;
+    right: 2rem;
+  }
+  #whatsapp i{  
+    font-size: 1.75rem;
+  }
+}
