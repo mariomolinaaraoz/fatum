@@ -257,9 +257,12 @@ html.sr .load-hidden {
 /* *********************/
 /* seccion S O B R E  M I */
 /* *********************/
-
 #sobremi {
-  max-width: 68.75rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
   margin: 0 auto;
   padding: 3rem 2rem;
   text-align: center;
@@ -769,6 +772,9 @@ footer #copyright {
     text-align: center;
   }
   /* seccion SOBRE MI */
+  #sobremi{
+    flex-direction: column !important;
+  }
   #sobremi .contenedor-foto {
     max-width: 14rem;
     margin-right: 3rem;  
