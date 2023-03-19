@@ -258,6 +258,7 @@ html.sr .load-hidden {
 /* seccion S O B R E  M I */
 /* *********************/
 #sobremi {
+  max-width: 68.75rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -513,7 +514,7 @@ footer {
   text-align: center;
   padding: 30px 0;
 }
-footer a {
+footer #fatum a {
   text-decoration: none;
   color: #fff;
   display: inline-block;
@@ -523,7 +524,27 @@ footer a {
 footer #copyright {
   margin:.5rem auto;
   font-size: 0.75rem;
+  letter-spacing: .14rem;
   color: #919191;
+}
+footer #design{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  letter-spacing: .025rem;
+}
+footer #design h1{
+  font-size: .75rem;
+  font-weight: normal;
+  color:#919191
+}
+footer #design p{  
+  font-size: .75rem;
+  color:#919191
+}
+footer #design a{
+  text-decoration: none;
 }
 /* *********************/
 /* seccion R E S P O N S I V E */
@@ -558,7 +579,7 @@ footer #copyright {
     padding: 1rem 1.5rem 1rem;
   }
   #hero h1.bienvenida{
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-top: 4rem;
     margin-bottom: .75rem;    
   }
@@ -622,7 +643,7 @@ footer #copyright {
     padding: 1rem 1.5rem 1rem;
   }
   #hero h1.bienvenida{
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-top: 2rem;
     margin-bottom: .75rem;    
   }
@@ -780,7 +801,7 @@ footer #copyright {
     margin-right: 3rem;  
   }
   #sobremi .contenedor-foto img {
-    padding: 1.rem;
+    padding: 1rem;
   }  
   #sobremi .sobremi .titulo-seccion {
     font-size: 1.5rem;    
@@ -871,6 +892,7 @@ footer #copyright {
     padding: 2rem 1rem 1rem;
   }
   #hero h1.bienvenida{
+    font-size: .8rem;
     margin-top: 4rem;
     margin-bottom: 1.25rem;    
   }
@@ -928,6 +950,9 @@ footer #copyright {
     text-decoration-thickness: .2rem;
     margin: .75rem auto 1rem;
   }
+  #sobremi .contenedor-foto img {
+    padding: .75rem;
+  }
   #sobremi .sobremi h3 {
     font-size: .8rem;  
     margin: 0rem auto .75rem;
@@ -969,7 +994,7 @@ footer #copyright {
   #servicios button.masServicios{
     font-size: 1rem;    
   }
-/* seccion P O R T F O L I O */
+  /* seccion P O R T F O L I O */
   #portfolio .image img {
     filter: grayscale(0);
   }  
