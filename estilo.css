@@ -281,6 +281,36 @@ html.sr .load-hidden {
   border-radius: .75rem;
   background-color: #f3f3f3;
 }
+
+#azt{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#sobremi .contenedor-foto .read-more-state {
+  display: none;
+}
+#sobremi .contenedor-foto .read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+#sobremi .contenedor-foto .read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+#sobremi .contenedor-foto .read-more-state ~ .read-more-trigger:before {
+  content: '+';
+  font-size: 1rem;
+  font-weight: 800;
+  color:red;
+}
+#sobremi .contenedor-foto .read-more-state:checked ~ .read-more-trigger:before {
+  content: '-';
+}
 #sobremi .sobremi {
   margin: 0 auto;
 }
@@ -332,7 +362,7 @@ html.sr .load-hidden {
 }
 .read-more-trigger {
   cursor: pointer;
-  display: inline-block;
+  display: inline-block; 
   padding: 0 .5em;
   color: #d9d9d9;
   font-size: .9em;
