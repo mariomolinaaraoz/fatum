@@ -196,6 +196,7 @@ html.sr .load-hidden {
   top:45rem;
   right: 2rem;
   filter: drop-shadow(0 .0625rem .25rem rgba(0,0,0,.5));
+  z-index: 200;
 }
 #email_icon i{
   font-size: 3rem;
@@ -206,6 +207,7 @@ html.sr .load-hidden {
   top:50rem;
   right: 2rem;
   filter: drop-shadow(0 .0625rem .25rem rgba(0,0,0,.5));
+  z-index: 200;
 }
 #linkedin i{
   font-size: 3rem;
@@ -216,8 +218,8 @@ html.sr .load-hidden {
   top:55rem;
   right: 2rem;
   filter: drop-shadow(0 .0625rem .25rem rgba(0,0,0,.5));
-  animation: pulse 2s infinite;
-  
+  z-index: 200;
+  animation: pulse 2s infinite;  
 }
 #whatsapp i{
   font-size: 3rem;
@@ -261,7 +263,7 @@ html.sr .load-hidden {
   max-width: 68.75rem;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: top;
   justify-content: center;
 
   margin: 0 auto;
@@ -281,36 +283,60 @@ html.sr .load-hidden {
   border-radius: .75rem;
   background-color: #f3f3f3;
 }
-
-#azt{
+#mision_button, #vision_button, #valores_button {
+  background-color: #717171;
+  margin: 1rem;
+  border-radius: .5rem;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  padding: 1rem;
+  color:white;
+  font-weight: bold;
+  text-align: left;
 }
-#sobremi .contenedor-foto .read-more-state {
+.read-more-state {
   display: none;
 }
-#sobremi .contenedor-foto .read-more-target {
+.read-more-target {
   opacity: 0;
   max-height: 0;
   font-size: 0;
+  font-weight: normal;  
   transition: .25s ease;
 }
-#sobremi .contenedor-foto .read-more-state:checked ~ .read-more-wrap .read-more-target {
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
   opacity: 1;
   font-size: inherit;
   max-height: 999em;
 }
-#sobremi .contenedor-foto .read-more-state ~ .read-more-trigger:before {
+.read-more-state ~ .read-more-trigger:before {
+  background-color: #fff;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
   content: '+';
   font-size: 1rem;
   font-weight: 800;
   color:red;
 }
-#sobremi .contenedor-foto .read-more-state:checked ~ .read-more-trigger:before {
+.read-more-state:checked ~ .read-more-trigger:before {
   content: '-';
 }
+
+#sobremi_button .read-more-state ~ .read-more-trigger:before {
+  background-color: #fff;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  content: 'Leer mas...';
+  font-size: 1rem;
+  font-weight: 800;
+  color:red;
+}
+#sobremi_button  .read-more-state:checked ~ .read-more-trigger:before {
+  content: 'menos...';
+}
+
 #sobremi .sobremi {
   margin: 0 auto;
 }
@@ -339,36 +365,6 @@ html.sr .load-hidden {
   text-align: left;
   color: #565656;
   margin-bottom: 0.0625rem;
-}
-#sobremi .sobremi .read-more-state {
-  display: none;
-}
-#sobremi .sobremi .read-more-target {
-  opacity: 0;
-  max-height: 0;
-  font-size: 0;
-  transition: .25s ease;
-}
-#sobremi .sobremi .read-more-state:checked ~ .read-more-wrap .read-more-target {
-  opacity: 1;
-  font-size: inherit;
-  max-height: 999em;
-}
-#sobremi .sobremi .read-more-state ~ .read-more-trigger:before {
-  content: 'Ver más...';
-}
-#sobremi .sobremi .read-more-state:checked ~ .read-more-trigger:before {
-  content: 'Ver menos...';
-}
-.read-more-trigger {
-  cursor: pointer;
-  display: inline-block; 
-  padding: 0 .5em;
-  color: #d9d9d9;
-  font-size: .9em;
-  line-height: 2;
-  border: none;
-  border-radius: .25em;
 }
 #sobremi .sobremi a {
   text-decoration: none;
@@ -551,10 +547,28 @@ footer #fatum a {
   margin: 5px;
   font-size: 26px;
 }
+footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .5rem 0 .5rem;
+  font-size: .75rem;
+}
+footer nav ul li a {
+  text-decoration: none;
+  color: #919191;
+  margin: 0 1rem;
+  font-weight: 400;
+  transition: 0.5s;
+}
+footer nav ul li a:hover {
+  color: var(--color-enfasis);
+}
 footer #copyright {
-  margin:.5rem auto;
+  margin:.3rem auto;
   font-size: 0.75rem;
-  letter-spacing: .14rem;
+  letter-spacing: .1rem;
   color: #919191;
 }
 footer #design{
@@ -574,7 +588,7 @@ footer #design p{
   color:#919191
 }
 footer #design a{
-  text-decoration: none;
+  text-decoration-color:#919191;
 }
 /* *********************/
 /* seccion R E S P O N S I V E */
@@ -827,8 +841,9 @@ footer #design a{
     flex-direction: column !important;
   }
   #sobremi .contenedor-foto {
-    max-width: 14rem;
-    margin-right: 3rem;  
+    display: none;
+    /* max-width: 14rem;
+    margin-right: 3rem;   */
   }
   #sobremi .contenedor-foto img {
     padding: 1rem;
@@ -1051,5 +1066,44 @@ footer #design a{
   }
   #contacto .btn-enviar {
     margin: 1rem auto .5rem;
+  }
+  /* seccion F O O T E R */ 
+  footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+  }
+  footer #fatum a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin: 5px;
+    font-size: 26px;
+  }
+  footer #copyright {
+    margin:.5rem auto;
+    font-size: 0.5rem;
+    letter-spacing: .05rem;
+
+  }
+  footer #design{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    letter-spacing: .025rem;
+  }
+  footer #design h1{
+    font-size: .5rem;
+    font-weight: normal;
+    color:#919191
+  }
+  footer #design p{  
+    font-size: .5rem;
+    color:#919191
+  }
+  footer #design a{
+    text-decoration: none;
   }
 }

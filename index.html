@@ -234,37 +234,40 @@
     <section id="sobremi" class="headline load-hidden">
       <div class="contenedor-foto">
         <img src="./assets/img/foto.jpg" alt="" />
-        <div id="azt">
-          <input type="checkbox" class="read-more-state" id="post-1" />
+
+        <div id="mision_button">
+          <input type="checkbox" class="read-more-state" id="mision"/>
           <p class="read-more-wrap">Misión:
           <span class="read-more-target">
-          Brindar soluciones de construcción, con respuesta inmediata hacia nuestros clientes, logrando la satisfacción de los mismos a través de la calidad y experiencia que nos brindan más de 40 años de trayectoria en el rubro.
+            Brindar soluciones de construcción, con respuesta inmediata hacia nuestros clientes, logrando la satisfacción de los mismos a través de la calidad y experiencia que nos brindan más de 40 años de trayectoria en el rubro.
           </span></p>
-          <label for="post-1" class="read-more-trigger"></label>
+          <label for="mision" class="read-more-trigger"></label>
         </div>
-        <div>
-          <input type="checkbox" class="read-more-state" id="post-1" />
+        
+        <div id="vision_button">
+          <input type="checkbox" class="read-more-state" id="vision" />
             <p class="read-more-wrap">
-              Visión
+              Visión:
             <span class="read-more-target">
               Continuar liderando el mercado de construcciones industriales, como una empresa que se destaca por la responsabilidad, innovación y calidad de cada proyecto que realiza.
             </span></p>
-            <label for="post-1" class="read-more-trigger"></label>
+            <label for="vision" class="read-more-trigger"></label>
         </div>
-        <div>
-          <input type="checkbox" class="read-more-state" id="post-1" />
+        
+        <div id="valores_button">
+          <input type="checkbox" class="read-more-state" id="valores" />
             <p class="read-more-wrap">
-              Valores
+              Valores:
             <span class="read-more-target">
               La familia Fatum sentó las bases de su empresa, rigiéndose bajo los mismos valores que ellos respetan e inculcan a las diferentes generaciones. Responsabilidad, confianza, integridad, respeto, compromiso y lealtad son los pilares que sostienen a Fatum Construcciones Industriales S.R.L. hace más de 40 años.
             </span></p>
-            <label for="post-1" class="read-more-trigger"></label>
+            <label for="valores" class="read-more-trigger"></label>
         </div>
       </div>
       <div class="sobremi">
         <p class="titulo-seccion">FATUM</p>
         <h3>Estructuras Metálicas - Naves Industriales</h3>
-        <div>
+        <div id="sobremi_button">
           <input type="checkbox" class="read-more-state" id="post-1" />
           <p class="read-more-wrap">
             La empresa FATUM ha estado fabricando estructuras metálicas durante 40
@@ -442,6 +445,30 @@
         </h1>
         <p>Estructuras Metálicas - Naves Industriales</p>
       </article>
+      <!-- <nav id="nav" class="">
+        <ul id="links">
+          <li>
+            <a
+              href="#inicio"
+              class="seleccionado"
+              onclick="seleccionar(this)"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a href="#sobremi" onclick="seleccionar(this)">Nosotros</a>
+          </li>
+          <li>
+            <a href="#servicios" onclick="seleccionar(this)">Servicios</a>
+          </li>
+          <li>
+            <a href="#portfolio" onclick="seleccionar(this)">Portfolio</a>
+          </li>
+          <li>
+            <a href="#contacto" onclick="seleccionar(this)">Contacto</a>
+          </li>
+        </ul>
+      </nav> -->
       <p id="copyright">Todos los derechos reservados - 2023</p>
       <br>
       <article id="design">
@@ -452,45 +479,48 @@
         </a>
       </article>			
     </footer>
-    <script src="script.js"></script>
-    <script>
-      ScrollReveal().reveal(".headline", { delay: 400 });
-    </script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      emailjs.init("TxBydyoMa4SKLDCsH");
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        // Add smooth scrolling to all links
-        $("a").on("click", function (event) {
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
+    <!-- SECCION J A V A  S C R I P T -->
+    <section id="js">
+      <script src="script.js"></script>
+      <script>
+        ScrollReveal().reveal(".headline", { delay: 400 });
+      </script>
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+      ></script>
+      <script type="text/javascript">
+        emailjs.init("TxBydyoMa4SKLDCsH");
+      </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          // Add smooth scrolling to all links
+          $("a").on("click", function (event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
 
-            // Store hash
-            var hash = this.hash;
+              // Store hash
+              var hash = this.hash;
 
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $("html, body").animate(
-              {
-                scrollTop: $(hash).offset().top,
-              },
-              800,
-              function () {
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-              }
-            );
-          } // End if
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $("html, body").animate(
+                {
+                  scrollTop: $(hash).offset().top,
+                },
+                800,
+                function () {
+                  // Add hash (#) to URL when done scrolling (default click behavior)
+                  window.location.hash = hash;
+                }
+              );
+            } // End if
+          });
         });
-      });
-    </script>
+      </script>
+    </section>
   </body>
 </html>
