@@ -183,7 +183,7 @@ html.sr .load-hidden {
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  transition: 0.5s;
+  transition: .5s;
 }
 #hero a:hover {
   background-color: var(--color-enfasis);
