@@ -81,40 +81,37 @@
     <!-- SECCION I N I C I O -->
     <section id="inicio">
       <header>
-        <div class="contenido-header">
-          <a href="https://www.fatum.com.ar/">
-            <img src="./assets/img/logo.png" width="100rem" alt="logo" />
-          </a>
-          <nav id="nav" class="">
-            <ul id="links">
-              <li>
-                <a
-                  href="#inicio"
-                  class="seleccionado"
-                  onclick="seleccionar(this)"
-                  >INICIO</a
-                >
-              </li>
-              <li>
-                <a href="#sobremi" onclick="seleccionar(this)">NOSOTROS</a>
-              </li>
-              <li>
-                <a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a>
-              </li>
-              <li>
-                <a href="#portfolio" onclick="seleccionar(this)">PORTFOLIO</a>
-              </li>
-              <li>
-                <a href="#contacto" onclick="seleccionar(this)">CONTACTO</a>
-              </li>
-            </ul>
-          </nav>
-          <div id="icono-nav" onclick="responsiveMenu()">
-            <i class="fa-solid fa-bars"></i>
-          </div>          
-        </div>
-      </header>
-    </section>
+        <nav>
+          <div class="logo">
+            <a href="https://www.fatum.com.ar/">
+              <img src="./assets/img/logo.png" width="100rem" alt="logo" />
+            </a>
+          </div>
+          <ul class="nav-links">
+            <li>
+              <a href="#inicio">INICIO</a>
+            </li>
+            <li>
+              <a href="#sobremi">NOSOTROS</a>
+            </li>
+            <li>
+              <a href="#servicios">SERVICIOS</a>
+            </li>
+            <li>
+              <a href="#portfolio">PORTFOLIO</a>
+            </li>
+            <li>
+              <a href="#contacto">CONTACTO</a>
+            </li>
+          </ul>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </nav>
+      </header>      
+    </section> 
 
     <section id="hero">
       <h1 class="bienvenida">Bienvenidos</h1>
@@ -555,6 +552,42 @@
       </article>			
     </footer>
     <!-- SECCION J A V A  S C R I P T -->
+
+    <script>  
+      const navSlide =()=> {
+        const burger=document.querySelector('.burger');
+        const nav=document.querySelector('.nav-links');
+        const navLinks=document.querySelectorAll('.nav-links li');
+
+        burger.addEventListener('click', () => {
+          //Toggle Nav
+          nav.classList.toggle('nav-active');
+          console.log("paso por aqui")
+          
+          //Animate Links
+          navLinks.forEach((link,index)=>{
+            console.log("index= " + index)
+            if(link.style.animation){
+              link.style.animation='';
+              console.log("link.stylevacio= " + link)
+            }else {
+              link.style.animation=`navLinkFade 0.5s ease forwards ${index/7+.3}s`;
+            }
+          });
+          //Burger Animation
+          burger.classList.toggle('toggle');
+        });
+      
+        nav.addEventListener('click', () => {
+          nav.classList.remove('nav-active');
+          
+          //Burger Animation
+          burger.classList.toggle('toggle');
+        });
+      }
+        
+      navSlide();
+    </script>
     <section id="js">
       <script src="script.js"></script>
       <script>
@@ -599,3 +632,5 @@
     </section>
   </body>
 </html>
+
+
