@@ -350,7 +350,7 @@
           <h4>Diseño</h4>
           <hr />          
           <p>
-            Ofrecemos un servicio llave en mano que se encarga de todo el proceso, desde el diseño hasta la construcción y la entrega final de la nave industrial.
+            Nos enfocamos en el diseño de estructuras funcionales, sismo resistentes y ampliables según sea la necesidad. Si necesita una estructura metálica resistente y duradera, FATUM es una excelente opción.
           </p>
         </div>
         <div class="servicio">
@@ -562,32 +562,23 @@
         burger.addEventListener('click', () => {
           //Toggle Nav
           nav.classList.toggle('nav-active');
-          console.log("paso por aqui")
-          
+                    
           //Animate Links
           navLinks.forEach((link,index)=>{
-            console.log("index= " + index)
             if(link.style.animation){
               link.style.animation='';
-              console.log("link.stylevacio= " + link)
             }else {
               link.style.animation=`navLinkFade 0.5s ease forwards ${index/7+.3}s`;
             }
           });
           //Burger Animation
-          burger.classList.toggle('toggle');
-        });
-      
-        nav.addEventListener('click', () => {
-          nav.classList.remove('nav-active');
-          
-          //Burger Animation
-          burger.classList.toggle('toggle');
+          burger.classList.toggle('toggle');          
         });
       }
         
       navSlide();
     </script>
+    
     <section id="js">
       <script src="script.js"></script>
       <script>
