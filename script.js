@@ -17,7 +17,7 @@ function showSlides() {
 //Función que arma el lighbox
 const images = document.querySelectorAll('.image');
 const lightbox = document.querySelector('.lightbox');
-const lightboxImg = lightbox.querySelector('img');
+const lightboxImg = lightbox.querySelector('.img');
 const closeBtn = lightbox.querySelector('.close-button');
 
 images.forEach((image) => {
