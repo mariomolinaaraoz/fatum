@@ -40,7 +40,7 @@ window.addEventListener('resize', adjustImageSize);
 function adjustImageSize() {
   const images = document.querySelectorAll('.image');
   images.forEach((image) => {
-    const img = image.querySelector('img');
+    const img = image.querySelector('.img');
     const aspectRatio = img.naturalWidth / img.naturalHeight;
     const containerWidth = image.offsetWidth;
     const containerHeight = image.offsetHeight;
