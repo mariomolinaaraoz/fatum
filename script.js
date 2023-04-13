@@ -17,7 +17,7 @@ function showSlides() {
 //Función que arma el lighbox
 const images = document.querySelectorAll('.image');
 const lightbox = document.querySelector('.lightbox');
-const lightboxImg = lightbox.querySelector('.img');
+const lightboxImg = lightbox.querySelector('img');
 const closeBtn = lightbox.querySelector('.close-button');
 
 images.forEach((image) => {
@@ -40,7 +40,7 @@ window.addEventListener('resize', adjustImageSize);
 function adjustImageSize() {
   const images = document.querySelectorAll('.image');
   images.forEach((image) => {
-    const img = image.querySelector('.img');
+    const img = image.querySelector('img');
     const aspectRatio = img.naturalWidth / img.naturalHeight;
     const containerWidth = image.offsetWidth;
     const containerHeight = image.offsetHeight;
