@@ -24,6 +24,9 @@ header {
   z-index: 100;
   top: 0;
 }
+header .logo a img{
+  width: 6.36rem;
+}
 nav{
   display: flex;
   justify-content: space-between;
