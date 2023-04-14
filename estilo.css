@@ -146,6 +146,9 @@ nav{
 #hero .container #slideshow .mySlides {
   display: none;
 }
+#hero .container #slideshow .mySlides img{
+  width: 100%;
+}
 /* Caption text */
 #hero .container #slideshow div {
   background-color: rgba(0, 0, 0, 0.8);
@@ -259,9 +262,7 @@ nav{
   font-size: 1.5rem;
   text-transform: uppercase;
   color: #111135;
-  text-decoration: underline;
-  text-decoration-color: var(--color-enfasis);
-  text-decoration-thickness: .3rem;
+  text-decoration: underline solid var(--color-enfasis) .3rem;
   margin-bottom: 3rem;
 }
 
@@ -354,9 +355,7 @@ nav{
   font-weight: bold;
   text-transform: uppercase;
   color: #111135;
-  text-decoration: underline;
-  text-decoration-color: var(--color-enfasis);
-  text-decoration-thickness: .3rem;
+  text-decoration: underline solid var(--color-enfasis) .3rem;
   margin: 0rem auto 1.5rem;
 }
 #sobremi .sobremi h3 {
@@ -855,8 +854,8 @@ footer #design a{
     padding: 1rem;
   }  
   #sobremi .sobremi .titulo-seccion {
-    font-size: 1.5rem;    
-    text-decoration-thickness: .2rem;
+    font-size: 1.5rem;
+    text-decoration: underline solid var(--color-enfasis) .2rem;
     margin: 0rem auto 1rem;
   }
   #sobremi .sobremi h3 {
@@ -989,7 +988,7 @@ footer #design a{
   }
   .titulo-seccion {
     font-size: 1rem;
-    text-decoration-thickness: .2rem;
+    text-decoration: underline solid var(--color-enfasis) .2rem;
     margin-bottom: 2rem;
   }
 /* seccion S O B R E  M I */
@@ -997,8 +996,8 @@ footer #design a{
     padding: 2rem 1.25rem 0rem;  
   }
   #sobremi .sobremi .titulo-seccion {
-    font-size: 1.5rem;  
-    text-decoration-thickness: .2rem;
+    font-size: 1.5rem;
+    text-decoration: underline solid var(--color-enfasis) .2rem;
     margin: .75rem auto 1rem;
   }
   #sobremi .contenedor-foto img {

@@ -14,25 +14,6 @@ function showSlides() {
   setTimeout(showSlides, 5000); // Change image every 4 seconds
 }
 
-//Función que arma el lighbox
-const images = document.querySelectorAll('.image');
-const lightbox = document.querySelector('.lightbox');
-const lightboxImg = lightbox.querySelector('img');
-const closeBtn = lightbox.querySelector('.close-button');
-
-images.forEach((image) => {
-  image.addEventListener('click', () => {
-    const imgSrc = image.getAttribute('href');
-    lightboxImg.setAttribute('src', imgSrc);
-    lightbox.style.display = 'flex';
-  });
-});
-
-closeBtn.addEventListener('click', () => {
-  lightbox.style.display = 'none';
-});
-
-
 // Ajustar el tamaño de las imágenes a medida que se carga la página y cuando se cambia el tamaño de la ventana del navegador.
 window.addEventListener('load', adjustImageSize);
 window.addEventListener('resize', adjustImageSize);
